@@ -1,11 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8" />
-  <title>Batch Endorser Electron</title>
+  <title>Nexus Batch Endorser Electron</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    label { font-weight: bold; margin-top: 10px; display: block; }
+    input[type=text], select {
+      width: 300px;
+      padding: 6px;
+      margin-top: 4px;
+      font-size: 14px;
+    }
+    button.browse-btn {
+      margin-left: 10px;
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+    #outputBox {
+      width: 100%;
+      height: 300px;
+      margin-top: 15px;
+      font-family: monospace;
+      font-size: 13px;
+      white-space: pre-wrap;
+      background-color: #111;
+      color: #ddd;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-y: scroll;
+      border: 1px solid #444;
+    }
+    #progressBar {
+      width: 400px;
+      height: 20px;
+      margin-top: 15px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    #statusLabel {
+      margin-top: 8px;
+      font-style: italic;
+      font-size: 14px;
+      height: 20px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to Batch Endorser</h1>
-  <p>This is your Electron app starter!</p>
+
+<h2>Nexus Batch Endorser</h2>
+
+<label for="apiKey">Nexus API Key:</label>
+<input id="apiKey" type="text" placeholder="Enter your API key here" />
+
+<label for="gameSelect">Select Game:</label>
+<select id="gameSelect">
+  <option value="skyrimspecialedition">Skyrim Special Edition</option>
+  <option value="fallout4">Fallout 4</option>
+  <option value="skyrim">Skyrim Legendary Edition</option>
+  <option value="falloutnv">Fallout New Vegas</option>
+  <option value="witcher3">Witcher 3</option>
+</select>
+
+<label for="modsFolder">MO2 Mods Folder:</label>
+<input id="modsFolder" type="text" placeholder="Path to your MO2 mods folder" />
+<button id="browseModsBtn" class="browse-btn">Browse...</button>
+
+<label for="profilesFolder">MO2 Profiles Folder:</label>
+<input id="profilesFolder" type="text" placeholder="Path to your MO2 profiles folder" />
+<button id="browseProfilesBtn" class="browse-btn">Browse...</button>
+
+<label for="mo2InstallPath">MO2 Install Path:</label>
+<input id="mo2InstallPath" type="text" placeholder="Path to your MO2 install directory" />
+<button id="browseInstallBtn" class="browse-btn">Browse...</button>
+
+<br />
+
+<button id="startBtn" style="margin-top: 15px; padding: 10px 20px; font-size: 16px;">Start Endorsement</button>
+
+<progress id="progressBar" value="0" max="100"></progress>
+<div id="statusLabel">Idle</div>
+
+<div id="outputBox"></div>
+
+<script src="renderer.js"></script>
+
 </body>
 </html>
+
+

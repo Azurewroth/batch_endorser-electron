@@ -1,5 +1,17 @@
 {
+  "name": "nexus-batch-endorser-electron",
+  "version": "0.1.0",
+  "description": "Electron version of Nexus Batch Endorser",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
   "dependencies": {
-    "electron": "^37.2.0"
-  }
+    "electron": "^37.2.0",
+    "axios": "^1.4.0"  
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
 }
