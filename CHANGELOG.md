@@ -5,21 +5,29 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 - Placeholder for upcoming changes
 
-## [0.1.0] - 2025-07-07
+#
+## [0.1.1] - 2025-07-07
+
 ### Added
-- Initial Electron version of Nexus Batch Endorser
-- Basic UI with input fields for:
+- UI fields for:
   - Nexus API Key
-  - Game selection dropdown
-  - Mods folder path
-  - Profiles folder path
+  - Game selection
+  - MO2 profiles folder
+  - Mods folder
   - MO2 install path
-- Backend integration using Axios for Nexus API calls
-- Basic endorsement process started via UI button
-- Progress bar and status updates
-- Config saved/encrypted locally
-- Multi-threading simulation via async calls (where applicable)
-- Clean and improved UI layout compared to Python Tkinter version
+- LICENSE (GPLv3), README, and this CHANGELOG
+- GitHub integration with repo publishing from VS Code
+
+---
+
+## [0.1.0] - 2025-07-06
+
+### Added
+- Initial Electron project setup (`npm init`)
+- Created basic folder structure and `package.json`
+- Installed core dependencies: `electron`, `axios`
+- Configured `"start"` script using Electron
+- Git initialized and published from VS Code
 
 ### Changed
 - Migrated from Python Tkinter GUI to Electron + JavaScript
