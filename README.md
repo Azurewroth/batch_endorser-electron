@@ -1,0 +1,1 @@
+“This is a work-in-progress Electron version of my Python batch endorser for Nexus Mods via Mod Organizer 2.”
